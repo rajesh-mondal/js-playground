@@ -1,10 +1,12 @@
-function isLeapYear(year){
-    const remainder = year % 4;
-    if(remainder === 0){
+function isLeapYear(year) {
+    if (year % 4 == 0 && year % 100 !== 0) {
         return true;
+    } else if (year % 100 == 0 && year % 400 == 0) {
+        return true;
+    } else {
+        return false;
     }
-    return false;
 }
 
-const isMyYearLeapYear = isLeapYear(1933);
-console.log(isMyYearLeapYear, 'is leap year');
+const isLiYe = isLeapYear(2024);
+console.log(isLiYe);
