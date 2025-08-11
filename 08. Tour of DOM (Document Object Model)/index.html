@@ -34,14 +34,14 @@
             </ul>
         </section>
         <section class="fruits-container">
-            <h1 id="fruits-title">Fruits I like</h1>
+            <h1 id="fruits-title" class="some-class random-class blue-bg">Fruits I like</h1>
             <ul>
                 <li>Apple</li>
                 <li>Banana</li>
                 <li>Carrot</li>
             </ul>
         </section>
-        <section>
+        <section id="places-container" class="large-text">
             <h1 id="places-title">Places I like to visit</h1>
             <ul>
                 <li class="important-places">Poland</li>
@@ -51,6 +51,7 @@
         </section>
     </main>
     <script src="js/dom.js"></script>
+    <script src="js/styleInJs.js"></script>
     <script>
         // const student = {
         //     name: 'John',
@@ -85,12 +86,12 @@
         // querySelectorAll
         const someLi = document.querySelectorAll('.fruits-container li');
         for (const li of someLi) {
-            console.log(li.innerText);
+            // console.log(li.innerText);
         }
 
         // querySelector
         const li = document.querySelector('.fruits-container li');
-        console.log(li.innerText);
+        // console.log(li.innerText);
     </script>
 </body>
 </html>
