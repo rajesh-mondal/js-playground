@@ -6,28 +6,91 @@
     <title>Tour of DOM</title>
     <link rel="stylesheet" href="styles/style.css">
     <style>
-        li{
+        .fruits-container li{
             color: tomato;
+        }
+        #fruits-title{
+            color: black;
+        }
+        .important-places{
+            color: blueviolet;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, voluptatibus!</p>
     </header>
     <main>
-        <h1>My Awesome DOM</h1>
-        <ul>
-            <li>A</li>
-            <li>B</li>
-            <li>C</li>
-            <li>D</li>
-            <li>E</li>
-        </ul>
+        <section>
+            <h1>My Awesome DOM</h1>
+            <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+            </ul>
+        </section>
+        <section class="fruits-container">
+            <h1 id="fruits-title">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="places-title">Places I like to visit</h1>
+            <ul>
+                <li class="important-places">Poland</li>
+                <li class="important-places">Germany</li>
+                <li class="important-places">Spain</li>
+            </ul>
+        </section>
     </main>
     <script src="js/dom.js"></script>
     <script>
-        console.log('Adding JS inside the html file');
+        // const student = {
+        //     name: 'John',
+        //     ID: 11,
+        //     study: function (time){
+        //         console.log(time, 'study korteche');
+        //     }
+        // }
+
+        const licollection = document.getElementsByTagName('li');
+        // console.log(licollection);
+        for ( const li of licollection ) {
+            // console.log( li.innerText );
+        }
+
+        // getElementsByTagName
+        const allHeadings = document.getElementsByTagName('h1');
+        for ( const h1 of allHeadings ) {
+            // console.log( h1.innerText );
+        }
+
+        // getElementById
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText = 'Fruits changed by JS';
+
+        // getElementsByClassName
+        const places = document.getElementsByClassName('important-places');
+        for (const place of places) {
+            // console.log(place.innerText);
+        }
+
+        // querySelectorAll
+        const someLi = document.querySelectorAll('.fruits-container li');
+        for (const li of someLi) {
+            console.log(li.innerText);
+        }
+
+        // querySelector
+        const li = document.querySelector('.fruits-container li');
+        console.log(li.innerText);
     </script>
 </body>
 </html>
